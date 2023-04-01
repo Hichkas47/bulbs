@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cl(x, y, z) {
+            if (document.getElementById(x).style.backgroundColor == "white")
+                document.getElementById(x).style.backgroundColor = "gold";
+            else
+                document.getElementById(x).style.backgroundColor = "white";
+            if (document.getElementById(y).style.backgroundColor == "white")
+                document.getElementById(y).style.backgroundColor = "gold";
+            else
+                document.getElementById(y).style.backgroundColor = "white";
+            if (document.getElementById(z).style.backgroundColor == "white")
+                document.getElementById(z).style.backgroundColor = "gold";
+            else
+                document.getElementById(z).style.backgroundColor = "white";
+        }
+        function cl2(x) {
+            if (document.getElementById(x).style.backgroundColor == "white")
+                document.getElementById(x).style.backgroundColor = "gold";
+            else
+                document.getElementById(x).style.backgroundColor = "white";
+        }
+    </script>
+    <style>
+        html {
+            background-color: black;
+        }
+
+        .s1 {
+            width: 360px;
+            height: 360px;
+            float: left;
+        }
+
+        .s2 {
+            width: 100%;
+            height: 120px;
+            float: left;
+        }
+
+        .s3 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: gold;
+            margin: 10px;
+        }
+
+        .s3 div {
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+        #dx {
+            background-color: black;
+            color: white;
+        }
+
+        .p {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="s1">
+        <div class="s2">
+            <div class="s3" id="tl" onclick="cl('tl', 'tm', 'ml')">
+
+            </div>
+            <div class="s3" id="tm" onclick="cl('tl', 'tm', 'tr')">
+
+            </div>
+            <div class="s3" id="tr" onclick="cl('tr', 'tm', 'mr')">
+
+            </div>
+        </div>
+        <div class="s2">
+            <div class="s3" id="ml" onclick="cl('tl', 'bl', 'ml')">
+
+            </div>
+            <div class="s3" id="dx">
+                <div onclick="cl2('tl')">
+                    tl
+                </div>
+                <div onclick="cl2('tm')">
+                    tm
+                </div>
+                <div onclick="cl2('tr')">
+                    tr
+                </div>
+                <div onclick="cl2('ml')">
+                    ml
+                </div>
+                <div style="background-color: black;">
+
+                </div>
+                <div onclick="cl2('mr')">
+                    mr
+                </div>
+                <div onclick="cl2('bl')">
+                    bl
+                </div>
+                <div onclick="cl2('bm')">
+                    bm
+                </div>
+                <div onclick="cl2('br')">
+                    br
+                </div>
+            </div>
+            <div class="s3" id="mr" onclick="cl('tr', 'mr', 'br')">
+
+            </div>
+        </div>
+        <div class="s2">
+            <div class="s3" id="bl" onclick="cl('bl', 'bm', 'ml')">
+
+            </div>
+            <div class="s3" id="bm" onclick="cl('bl', 'bm', 'br')">
+
+            </div>
+            <div class="s3" id="br" onclick="cl('bm', 'mr', 'br')">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
